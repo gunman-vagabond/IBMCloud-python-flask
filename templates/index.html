@@ -1,0 +1,43 @@
+<!doctype html>
+<html >
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+
+  </head>
+  <body>
+    <div ng-app ng-controller="customersController">
+			<form novalidate>
+				<input type="text" ng-model="userinput">
+				<button ng-click="submit()">Submit</button>			
+			</form><br><br>		
+			<div id="lower"></div>
+                        <div id="upper"></div>
+              <script>
+		function customersController($scope, $http) {
+			$scope.submit = function() {
+				$http.get(encodeURI("?lower=" + $scope.userinput))
+						.success(function(response, data, status) {
+							document.getElementById("lower").innerHTML=response;
+						}).error(
+								function(response, data, status) {
+									alert("error" + response + ":" + data + ":"
+											+ status);
+								});
+                                 $http.get(encodeURI("?upper=" + $scope.userinput))
+						.success(function(response, data, status) {
+							document.getElementById("upper").innerHTML=response;
+						}).error(
+								function(response, data, status) {
+									alert("error" + response + ":" + data + ":"
+											+ status);
+								});
+
+			};
+
+		}
+		</script>
+
+	
+    </div>
+  </body>
+</html>

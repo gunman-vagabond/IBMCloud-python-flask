@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>gunclock</title>
+</head>
+<body>
+
+    <form action="/gunclock">
+      size:<input type="text" name="size" size="2" value="{{ gunclockSize }}">
+      color:<input type="text" name="color" size="7" value="{{ gunclockColor }}">
+      <input type="submit" value="redraw GunClock">
+    </form>
+
+    <table>
+      <tr><td bgcolor="{{ gunclockColor }}" style="line-height:normal">
+        <pre  style="background-color:{{ gunclockColor }};font-family:monospace">{{ gunclockStr }}</pre>
+      </td></tr>
+    </table>
+
+</body>
+</html>
