@@ -5,10 +5,10 @@ IBM Cloud python flask app sample
 
 ## Deployment to IBM Cloud
 
-Web ‚Å tomcat ‚Ì Cloud Foundry ‚ğ¶¬‚µ‚Ä‚©‚çAˆÈ‰º‚ğ‚â‚éB
+Web ã§ python-flask ã® Cloud Foundry ã‚’ç”Ÿæˆã—ã¦ã‹ã‚‰ã€ä»¥ä¸‹ã‚’ã‚„ã‚‹ã€‚
 
     % bluemix api https://api.ng.bluemix.net
-    % bluemix login -u <ƒƒOƒCƒ“–¼> -o <‘gD–¼> -s <ƒXƒy[ƒX–¼>
-      (—á: bluemix login -u hryuba@gmail.com -o hryuba@gmail.com -s dev)
-    % bluemix app push <Cloud Foundry “o˜^–¼>
+    % bluemix login -u <ãƒ­ã‚°ã‚¤ãƒ³å> -o <çµ„ç¹”å> -s <ã‚¹ãƒšãƒ¼ã‚¹å>
+      (ä¾‹: bluemix login -u hryuba@gmail.com -o hryuba@gmail.com -s dev)
+    % bluemix app push <Cloud Foundry ç™»éŒ²å>
 
